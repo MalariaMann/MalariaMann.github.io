@@ -45,31 +45,42 @@
       transform: scale(1.1);
     }
 
+    /* ===== SECTION TITLE ===== */
+    .section-title {
+      max-width: 1200px;
+      margin: 60px auto 10px;
+      padding-left: 20px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #d0d0d0;
+    }
+
     /* ===== CARD CONTAINER ===== */
     .card-container {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       gap: 40px;
-      padding: 60px 20px;
+      padding: 20px;
       flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto 80px;
     }
 
     /* ===== FANCY CARD (SQUIRCLE) ===== */
     .card {
       background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
-      border-radius: 30px;
+      border-radius: 20px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.4);
       width: 320px;
       overflow: hidden;
       transition: all 0.3s ease;
       border: 1px solid #333;
-      position: relative;
       animation: bounceIn 1s ease;
     }
 
     .card:hover {
-      transform: translateY(-8px) scale(1.02);
+      transform: translateY(-6px);
       box-shadow: 0 15px 30px rgba(0,0,0,0.6);
       border-color: #555;
     }
@@ -80,15 +91,39 @@
       height: 220px;
       object-fit: cover;
       border-bottom: 1px solid #333;
-      border-top-left-radius: 30px;
-      border-top-right-radius: 30px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    /* ===== CARD CONTENT ===== */
+    .card-content {
+      padding: 15px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .bottom-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6px;
+    }
+
+    .date {
+      font-size: 0.85rem;
+      color: #bbb;
     }
 
     /* ===== DOWNLOAD BUTTON ===== */
     .download-btn {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
       background: #0078ff;
       color: white;
       font-size: 0.8rem;
@@ -103,18 +138,10 @@
 
     .download-btn:hover {
       background: #3399ff;
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
     /* ===== FOOTER ===== */
-    .card-footer {
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 20px;
-      font-size: 0.9rem;
-      color: #bbb;
-    }
-
     footer {
       text-align: center;
       padding: 30px;
@@ -153,6 +180,11 @@
       .card {
         width: 90%;
       }
+
+      .section-title {
+        text-align: center;
+        padding-left: 0;
+      }
     }
   </style>
 </head>
@@ -166,35 +198,43 @@
     </div>
   </header>
 
+  <div class="section-title">Projects:</div>
+
   <main>
     <div class="card-container">
       <!-- Card 1 -->
       <div class="card">
         <img src="/images/image1.png" alt="Recon IP">
-        <a class="download-btn" href="https://github.com/MalariaMann/Recon-IP/archive/refs/heads/main.zip" target="_blank">Download</a>
-        <div class="card-footer">
-          <span>Recon IP</span>
-          <span>31 October 2025</span>
+        <div class="card-content">
+          <div class="project-title">Recon IP</div>
+          <div class="bottom-row">
+            <span class="date">31 October 2025</span>
+            <a class="download-btn" href="https://github.com/MalariaMann/Recon-IP/archive/refs/heads/main.zip" target="_blank">Download</a>
+          </div>
         </div>
       </div>
 
       <!-- Card 2 -->
       <div class="card">
         <img src="/images/image2.png" alt="Network Multi Tools">
-        <a class="download-btn" href="https://github.com/MalariaMann/guns.lol-username-checker-NEXUSV1/archive/refs/heads/main.zip" target="_blank">Download</a>
-        <div class="card-footer">
-          <span>Network Multi Tools</span>
-          <span>31 October 2025</span>
+        <div class="card-content">
+          <div class="project-title">Network Multi Tools</div>
+          <div class="bottom-row">
+            <span class="date">31 October 2025</span>
+            <a class="download-btn" href="https://github.com/MalariaMann/guns.lol-username-checker-NEXUSV1/archive/refs/heads/main.zip" target="_blank">Download</a>
+          </div>
         </div>
       </div>
 
       <!-- Card 3 -->
       <div class="card">
         <img src="/images/image3.png" alt="Nexus V1 | Guns Lol Username Sniper">
-        <a class="download-btn" href="https://github.com/MalariaMann/guns.lol-username-checker-NEXUSV1/archive/refs/heads/main.zip" target="_blank">Download</a>
-        <div class="card-footer">
-          <span>Nexus V1 | Guns Lol Username Sniper</span>
-          <span>31 October 2025</span>
+        <div class="card-content">
+          <div class="project-title">Nexus V1 | Guns Lol Username Sniper</div>
+          <div class="bottom-row">
+            <span class="date">31 October 2025</span>
+            <a class="download-btn" href="https://github.com/MalariaMann/guns.lol-username-checker-NEXUSV1/archive/refs/heads/main.zip" target="_blank">Download</a>
+          </div>
         </div>
       </div>
     </div>
